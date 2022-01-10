@@ -2,7 +2,7 @@ pipeline {
     agent { label 'nodejs' }
 
     // Set your OCP project
-    environment { APP_NAMESPACE = 'madiTG-devsecops' }
+    environment { APP_NAMESPACE = 'pzyscy-devsecops' }
 
     stages{
 
