@@ -46,7 +46,7 @@ stage('Push to Quay') {
         failure {
 
             withCredentials([usernamePassword(
-                credentialsId: 'token',
+                credentialsId: 'github-global',
                 usernameVariable: 'USERNAME',
                 passwordVariable: 'PASSWORD'
             )]) {
