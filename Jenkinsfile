@@ -38,6 +38,7 @@ stage('Push to Quay') {
 
     }
 
+} 
 }
 
     post {
@@ -63,7 +64,5 @@ stage('Push to Quay') {
 
         }
 
-    }
-        // Add more stages here
     }
 }
