@@ -2,7 +2,7 @@ pipeline {
     agent { label 'nodejs' }
 
     // Set your OCP project
-    environment { APP_NAMESPACE = '...' }
+    environment { APP_NAMESPACE = 'madiTG-devsecops' }
 
     stages{
 
@@ -11,7 +11,20 @@ pipeline {
                 sh "node test.js"
             }
         }
+        stage('Deploy') {
 
+            steps {
+
+                sh '''
+
+                    oc start-build greeting-devsecops \
+                    --follow --wait -n ${APP_NAMESPACE}
+
+                '''
+
+            }
+
+        }
         // Add more stages here
     }
 }
