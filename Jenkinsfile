@@ -54,7 +54,7 @@ stage('Push to Quay') {
 
                     curl -X POST \
                     -H 'Authorization: token $PASSWORD' \
-                    'https://api.github.com/repos/$USERNAME/do400-greeting-devsecops/issues' \
+                    'https://api.github.com/repos/madiTG/do400-greeting-devsecops/issues' \
                     -d '{"title": "CI build $BUILD_NUMBER", "body": "Pipeline build $BUILD_NUMBER has failed"}'
 
                 """
